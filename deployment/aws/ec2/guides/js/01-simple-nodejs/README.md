@@ -6,7 +6,7 @@
 ## What is EC2 instance?
 [EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/LaunchingAndUsingInstances.html) is a virtual server in the AWS Cloud. We have many ways to create an instance. In the guide, I will create it via `Launch instance` in `EC2 Dashboard`.
 
-## Deploy a simple NodeJS server
+## Deploy the server
 **I. Have an AWS account and access to `EC2 Dashboard`.**
 ![EC2 Dashboard](./images/1.png)
 
