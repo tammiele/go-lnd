@@ -38,7 +38,7 @@ You copy `Public IPv4 DNS` having in `Instance Information`. In current folder, 
 $ ssh -i <file-name>.pem <publict-ipv4-dns>
 ```
 
-Otherwise, you will get Error: Unprotected private key file
+Otherwise, you will get an error `Unprotected private key file`.
 ```bash
 $ chmod 400 <file-name>.pem
 ```
@@ -106,7 +106,7 @@ $ pm2 log
 ![server log](./images/9.png)
 
 Now, the server is running on port **8080** and the url is `<public-ipv4-address>:8080`.
-But I think you can get the error being `too long to respond`. You must update `inbound rules` below.
+But I think you can get an error being `too long to respond`. You must update `inbound rules` below.
 ![inbounce rules](./images/8.png)
 
 **After that, Congrats! The Node server is being run now.**
