@@ -102,9 +102,8 @@ $ pm2 log
 ```
 
 Now, the server is running on port **8080** and the url is `<public-ipv4-address>:8080`.
-But I think you will get the error being `too long to respond`. You must update `inbound rules` below.
+But I think you can get the error being `too long to respond`. You must update `inbound rules` below.
 ![inbounce rules](./images/8.png)
 
-**After that, Congrats! The Node server is being run now.**
-
-**Please do not share any AWS information on the Internet.**
+**After that, Congrats! The Node server is being run now.
+Please do not share any AWS information on the Internet.**
