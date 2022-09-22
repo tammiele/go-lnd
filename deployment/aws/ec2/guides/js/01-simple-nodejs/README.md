@@ -6,7 +6,7 @@
 ## What is EC2 instance?
 [EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/LaunchingAndUsingInstances.html) is a virtual server in the AWS Cloud. We have many ways to create an instance. In the guide, I will create it via `Launch instance` in `EC2 Dashboard`.
 
-## Create an EC2 instance
+## Deploy a simple NodeJS server
 **I. Have an AWS account and access to `EC2 Dashboard`.**
 ![EC2 Dashboard](./images/1.png)
 
@@ -77,7 +77,7 @@ $ ssh-keygen -t rsa -b 4096
 ```bash
 $ git clone git@github.com:<repo-name>.git
 ```
-You can try cloning my demo here: https://github.com/imnhsang/simple-nodejs-deploy-ec2 
+You can try cloning the demo [here](https://github.com/GoldenOwlAsia/go-lnd/tree/deployment_js/simple-nodejs-ec2/deployment/aws/ec2/guides/js/01-simple-nodejs/sample-code).
 
 3. Run Node server
 If you cloned my demo, you can try commands bellow.
@@ -102,6 +102,7 @@ $ pm2 start dist/server.js
 ```bash
 $ pm2 log
 ```
+![server log](./images/9.png)
 
 Now, the server is running on port **8080** and the url is `<public-ipv4-address>:8080`.
 But I think you can get the error being `too long to respond`. You must update `inbound rules` below.
