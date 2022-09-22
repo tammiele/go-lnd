@@ -109,6 +109,6 @@ Now, the server is running on port **8080** and the url is `<public-ipv4-address
 But I think you can get an error being `too long to respond`. You must update `inbound rules` below.
 ![inbounce rules](./images/8.png)
 
-**After that, Congrats! The Node server is being run now.**
+**After that, Congrats! The Node server is being run now. 🥳🥳🥳**
 
-**Please do not share any AWS information on the Internet.**
+**Please do not share any AWS information on the Internet. ⚠️⚠️⚠️**
