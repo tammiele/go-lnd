@@ -20,11 +20,11 @@
 ![virtual server type](./images/3.png)
 
 4. Generate **key pair**. If you want to ssh to the virtual, you must have it.
+- Press `Create new key pair`
 ![generate key pair](./images/4.png)
-Press `Create new key pair`
 
+- Fill in `Key pair name`, then press `Create key pair` and **save** it in your laptop.
 ![key pair](./images/5.png)
-Fill in `Key pair name`, then press `Create key pair` and **save** it in your laptop.
 
 5. Press `Launch Instance`. The instance is created successfully.
 ![launch instance](./images/6.png)
@@ -32,7 +32,7 @@ Fill in `Key pair name`, then press `Create key pair` and **save** it in your la
 **III. SSH to virtual**
 If you use iTerm2 on Apple Silicon chip, I think you can met the terminal is very slow and lag. So you can try using [WARP](https://www.warp.dev/) instead.
 
-You copy `Public IPv4 DNS` having in `Instance Information`. In current folder, you paste the `.pem` file to here. Open the terminal and type
+You copy `Public IPv4 DNS` having in `Instance Information`. In current folder, you paste the `.pem` file.
 ```bash
 $ ssh -i <file-name>.pem <publict-ipv4-dns>
 ```
