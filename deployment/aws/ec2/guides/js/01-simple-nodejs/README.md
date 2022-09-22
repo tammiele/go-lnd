@@ -30,6 +30,7 @@
 ![launch instance](./images/6.png)
 
 **III. SSH to virtual**
+
 If you use iTerm2 on Apple Silicon chip, I think you can met the terminal is very slow and lag. So you can try using [WARP](https://www.warp.dev/) instead.
 
 You copy `Public IPv4 DNS` having in `Instance Information`. In current folder, you paste the `.pem` file.
