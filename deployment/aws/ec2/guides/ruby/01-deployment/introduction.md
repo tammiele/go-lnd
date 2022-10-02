@@ -16,7 +16,7 @@ Now, before getting started with what is AWS, let us first give you a brief desc
 ## What is Cloud Computing?
 Cloud computing is the delivery of online services (such as servers, databases, software) to users. With the help of cloud computing, storing data on local machines is not required. It helps you access data from a remote server. Moreover, it is also used to store and access data from anywhere across the world.
 
-![Cloud Computing](https://thietbikythuat.com.vn/wp-content/uploads/2021/03/cloud-computing.png "Cloud Computing")
+![Cloud Computing](./images/cloud-computing.png "Cloud Computing")
 
 ## What is AWS?
 Amazon web service is an online platform that provides scalable and cost-effective cloud computing solutions.
@@ -45,3 +45,18 @@ These services help developers build, deploy, and scale an application in the cl
 EC2 stands for Elastic Compute Cloud. It is the core compute component in the infra. This is nothing but a simple server where applications can be hosted. There are multiple types of EC2s available from AWS, each type serving a slightly different purpose. AWS uses the word EC2 Instance referring to a server.
 
 It offers various instance types to developers so that they can choose required resources such as CPU, memory, storage, and networking capacity based on their application requirements.
+
+There are some related knowledge you should know when exploring an EC2 instance:
+
+##### Instance type
+This item is to determine the hardware configuration for our server, about CPU, Ram, just choose `Free tier`.
+##### Key pair
+This part will generate a private key that will allow you to SSH into our server to execute command line commands. You must have knowledge of Linux cmd. Avoid public to outsiders because if others have it, they will be able to access your server
+
+##### Security Groups
+Security groups are a set of firewall rules that control traffic to and from your instance. Incoming rules control incoming traffic from your instance and outgoing rules control outgoing traffic from your instance. You can specify one or more security groups for your instance. If you specify multiple security groups, all rules will be evaluated to control incoming and outgoing traffic. If no value is specified, the value of the source template will still be used. If a template value is not specified then the default API value will be used.
+
+In a nutshell, it's like a Windows firewall that allows you to open ports, allowing outsiders to access any server application.
+
+##### Storage
+This section specifies archiving options for the instance. allocate storage for our instances. Here AWS EC2 allows up to 30GB for free.

@@ -2,13 +2,13 @@
 
 ### Step 1: Create an EC2 instance
 Click on `launch instances` and fill out all the required fields. In this tutorial we will launch a `t2.micro` instance, using Debian AMI.
-![Create an instance](https://lh3.googleusercontent.com/dd3VNHr64qoZGzC-TRFxLl3jnzfrQoRrFGy825Fuy8Q_pKY3QjfCqJhBcCQCIhyQ1YZI9nk4aENVrlbzAFanOju3KW6EsNPUswwmPJMSiLkUD33EsOTeCsWBrRSIHIXVCar9yIyp90cPL2BlghMScXRLsZd9N0cfrKxj4_DL2arHG5yHv3LRO2wIeUYhDrvkhNF2Ye1BWMW-tUxz-nho09sq8r5cmSadRwpFtqOnvKdDHz9UXCbeppCHo9sUGWjiMV_RyenBqFg3vntsRrhoEyDK63869ziTqpB6AEwtW1y3UxAxEYIVmb1Kt4obAlR03zpUXjtfddsRA-yOhEHDbNkXGZhbovwhaWau8MN0TyTX5f7IW9IQsQMt7Y3QyZ8MPUHCPB3WTntcuwY25tGzNxLMVKqNbkrQIIsMujbm7_8DDJ0AuuiRqizdhNLS5sUZ63YooGOtpmGnnP-CzK_0WQzeO0YF7QlRiUKTdKEhLOsNRzE-DZeksCJ5lEl-P_MhYcDZy6Le02kGvslcEKhSM2eYknchnFIecgfEUtdwA75pU-9vgY3ORy32lHsGgsjF2aM01NLQNw70qsqm48DRs1JGwtzNiqMQHHyqZcdRAbj3R0KA1pyNcTrte96s_nQz5ZEA86ZbJn5VSf3y-j_TaKCPa1zUEJrZUf-0lbfkoQIcpVxDKGaACPyLPNPn6c0s9chORNvq7zUGD0DYnwSxptLZMeDCaAtzfB_XpjpI37OXb-teZua4ABEKyDmmnvCajH-ZJVqBSg5QtoeyoOgeBqj3HxaAG6-e8chz1IFzzUEPb0Qsv0lsxBoWGn6-4627vt6zyhg=w2692-h1474-no?authuser=1 "Create an instance")
+![Create an instance](./images/1.png "Create an instance")
 
 In `Key pair` section, you can create a new key pair an store in your local machine. If you have already had once, select it on the dropdown to re-use the old key pair. Everything else you can left it as default and click `Launch instance`
 
 ### Step 2: Connect to the instance
 Go to the detail page of your instance and click on `Action` -> `Connect`. A small container will pop up with guide you how to connect step by step.
-![Create an instance](https://lh3.googleusercontent.com/toElPuY0mBPApkROPxktjcf4nn68iXCRYCSZ4y0QiTUBKwyMrBOFqQnZyEwmGe-cX9Joh8H5xCipt5Pe-o324R_5AcD7dG8oillahxf3Vh0YcMbNR67Jk5mLILGUpofW8qLCchnfzsVKdC7qGHRQ8hY8sN-QFMQkyc9TzoE7FSDwbkQRf3X_oltNdGVEV6xTJRBn9DkQfZRL7kWuwVviU0ON7uaqcE-GblycI-wwt_0eZT-CUSkpNaLzOabJmDnjLQL1z1WSywvQQ3vbGTbglcot875UI9mTy16KIK9G0WjkPjERX7U4hDhy-yK7LDef4P5oXT4ITbkXuWscilh5Xmqj2Q4NFeLChH1M9e1NjugcuUxkKNb3DeYH7Uo2seyYF_Zsr6YWnTOMzxvAPYyHt2QFNK-lAqIeZ38nxVr47Brx9udeaJi6re3trJeAWAKzsXgrqW3wwYYF3Bsp0Q0VDDwtBZ6CjlIKh5Lzd5tQpRXzuaMuvt3rmcfGJs4Lwx20u5oCT4Do2BIMaiZ2Ob8miZmNXYjQKOGo2rSYLBO8cBNiyQaMBsnMIsZ0wJCoyeiEKcamGJM1LkKkyGs53yOxKXpC_-t_kPMsvSS6ZEw5K7of8XsvFMwccV-yZqydS0iweu146gWftbvTlBgJxLWpk2bo41HfbEdZ7BOp47jxXnAZLMrXF0t5CKIwFqPFnKNdU12agZ8Ptt9KT_ayyu2CqnKS33AvlEdC3BsvVG6o-tnycrAkIq7Ej3QsqWwvcXPRuVayPSbgAps5MtBpXwWoAuGdQcoRpjzUTemi86NoQyBZUoRFat-y9JLje3x5Lsm27SbRoWs=w2880-h1578-no?authuser=1 "Create an instance")
+![Create an instance](./images/2.png "Create an instance")
 
 ### Step 3: Install software
 #### Install Ruby and needed packages
