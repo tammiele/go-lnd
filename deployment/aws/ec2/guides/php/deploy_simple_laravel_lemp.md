@@ -1,12 +1,16 @@
-Here is a guide on how you will create a LEMP server on AWS running a Laravel project with the following configuration:
-+ Amazon Linux OS: Centos 7, WebService: Apache, PHP8, DB: MariaDB
+<p align="center">
+<img src="https://img.shields.io/badge/LAMP-AWS-yellowgreen" />
+</p>
+Here is a guide on how you will create a LAMP server on AWS running a Laravel project with the following configuration:
 
-* Apache: Is an open source reverse proxy server that uses popular HTTP, HTTPS, SMTP, POP3 and IMAP protocols. Also used as load balancer, HTTP cache and web server.
+**Amazon Linux OS**: Centos 7, WebService: Apache, PHP8, DB: MariaDB
+
+**Apache:** Is an open source reverse proxy server that uses popular HTTP, HTTPS, SMTP, POP3 and IMAP protocols. Also used as load balancer, HTTP cache and web server.
 
 
-First we need an AWS account
+First we need an AWS account, login & connect to console AWS. [Login to Console AWS](https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin)
 
-# 1. Install PHP
+# Install PHP
 
 Confirm that the amazon-linux-extras package is installed:
 ```
@@ -61,23 +65,23 @@ Copyright (c) 1997-2018 The PHP Group
 Zend Engine v4.0.20, Copyright (c) Zend Technologies
 ```
 
-# 2. Install Apache
-## 2.1 First we need update all dependence of OS:
+# Install Apache
+## First we need update all dependence of OS:
 ```
 sudo yum update -y
 ```
 
-## 2.2 CMD download and install Apache
+## CMD download and install Apache
 
 ```
 sudo yum install -y httpd
 ```
-## 2.3 After that we start Apache webserver
+## After that we start Apache webserver
 ```
 [ec2-user ~]$ sudo systemctl start httpd
 ```
 
-## 2.4 Next we will configure the system to start Apache Webservice automatically every time the system reboots:
+## Next we will configure the system to start Apache Webservice automatically every time the system reboots:
 ```
 [ec2-user ~]$ sudo systemctl enable httpd
 ```
@@ -88,7 +92,7 @@ We can check the status of **httpd**
 enabled
 ```
 
-## 2.5 Managing the Apache Process
+## Managing the Apache Process
 Now that you have your web server up and running, let’s go over some basic management commands.
 
 To stop your web server, type:
@@ -121,14 +125,14 @@ Apache will now start automatically when the server boots again.
 The default configuration for Apache will allow your server to host a single website. If you plan on hosting multiple domains on your server, you will need to configure virtual hosts on your Apache web server.
 
 
-## 2.6 Config file httpd
+## Config file httpd
 The default Apache configuration file is located at ``/etc/httpd/conf/httpd.conf``. We restrict the dynamics of this file, when we want to configure a website or multiple websites, we should create a separate conf file in the directory ``/etc/httpd/conf.d/*.conf`` . The config will have its own article, but for now we will leave the default configuration.
 ** Note: Every time we change the configuration, we have to call the command restart apache so that it can get the new configuration we just edited or added
 ```
 sudo systemctl restart httpd
 ```
 
-# 3. Open port public for server 
+# Open port public for server 
 So we have installed Apache, but we still have 1 more step to open the browser and enter Public IP Address or Public IP DNS to be able to see our web service.
 AWS has a security department, it's like a firewall. You need a public port to allow outsiders to access our server through the ports we allow. It's called Security Group
 So what do we need to do, very simple, every time you create an EC2 instance, it will be assigned a security group by default. We'll just open the port for them. Here's how to do it:
@@ -149,43 +153,43 @@ Select the Security groups link above and click edit Inbound rules, then choose 
 
 Now you can open a browser and access Ip Public or Ip public DNS. By default web source will be saved at /var/www/html. If this directory is empty, it will display the default Apache template.
 So we're done publicizing. Next we will install Database 
-# 4. Install MariaDB
-## 4.1 Similar to installing PHP, we use the following command:
+# Install MariaDB
+## Similar to installing PHP, we use the following command:
 ```
 sudo yum install -y mariadb-server
 ```
 
-## 4.2 Start MariaDB server:
+## Start MariaDB server:
 
 ```
 [ec2-user@ip-172-31-10-22 ~]$ sudo systemctl start mariadb
 ```
-## 4.3 Run mysql_secure_installation.
+## Run mysql_secure_installation.
 
 ```
 [ec2-user@ip-172-31-10-22 ~]$ sudo mysql_secure_installation
 Enter current password for root (enter for none): 
 ```
-### a. By default, the password will be blank, so just press Enter
-### b. Press **Y** to set the password then re-enter the password again
-### c. Press **Y** to delete the anonymous account.
-### d. Press **Y** to block logic with root
-### e. Press **Y** to delete DB Test
+### By default, the password will be blank, so just press Enter
+### Press **Y** to set the password then re-enter the password again
+### Press **Y** to delete the anonymous account.
+### Press **Y** to block logic with root
+### Press **Y** to delete DB Test
 ### f. Press **Y** to reload and save changes
 
 Now that MariaDB has been installed, you can access cmd to check the DB or install phpMyAdmin. Then create a db to run the project.
-## 4.4 Create a new DB with a project
+## Create a new DB with a project
 
 ... 
-# 5. Deploy PHP (Laravel) Project
+# Deploy PHP (Laravel) Project
 Deploying PHP Laravel projects can be deployed manually, but I should prioritize using git for convenience and speed.
-## 5.1 Install git
+## Install git
 Still using simple cmd
 ```
 sudo yum install -y git
 ```
 
-## 5.2 Install Composer
+## Install Composer
 ```
 cd ~
 sudo curl -sS https://getcomposer.org/installer | sudo php
@@ -205,7 +209,7 @@ Check if composer installed successfully
 Composer version 2.4.2 2022-09-14 16:11:15
 ```
 
-5.3 Pull source and config
+## Pull source and config
 We access the web path (default is /var/www/html)
 ```
 cd /var/www/html
