@@ -13,6 +13,87 @@ After creating the instance successfully, go to the instance dashboard, choose y
 
 ### Step 3: Install software
 #### Install Apache
+Apache is available within Ubuntu’s default software repositories, making it possible to install it using conventional package management tools.
+
+Begin by updating the local package index to reflect the latest upstream changes:
+```
+sudo apt update
+```
+Then, install the apache2 package:
+```
+sudo apt install apache2
+```
+#### Adjusting the Firewall
+Before testing Apache, it’s necessary to modify the firewall settings to allow outside access to the default web ports. If you followed the instructions in the prerequisites, you should have a UFW firewall configured to restrict access to your server.
+
+During installation, Apache registers itself with UFW to provide a few application profiles that can be used to enable or disable access to Apache through the firewall.
+
+List the ufw application profiles by running the following:
+```
+sudo ufw app list
+```
+Your output will be a list of the application profiles:
+```
+Available applications:
+  Apache
+  Apache Full
+  Apache Secure
+  OpenSSH
+```
+As indicated by the output, there are three profiles available for Apache:
+- `Apache`: This profile opens only port `80` (normal, unencrypted web traffic)
+- `Apache Full`: This profile opens both port `80` (normal, unencrypted web traffic) and port 443 (TLS/SSL encrypted traffic)
+- `Apache Secure`: This profile opens only port `443` (TLS/SSL encrypted traffic)
+
+It is recommended that you enable the most restrictive profile that will still allow the traffic you’ve configured. Since you haven’t configured SSL for your server yet in this guide, you’ll only need to allow traffic on port 80:
+```
+sudo ufw allow 'Apache'
+```
+You can verify the change by checking the status:
+```
+sudo ufw status
+```
+The output will provide a list of allowed HTTP traffic:
+```
+Status: active
+
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere                  
+Apache                     ALLOW       Anywhere                
+OpenSSH (v6)               ALLOW       Anywhere (v6)             
+Apache (v6)                ALLOW       Anywhere (v6)
+```
+#### Checking your Web Server
+At the end of the installation process, Ubuntu 22.04 starts Apache. The web server will already be up and running.
+
+Make sure the service is active by running the command for the `systemd` init system:
+```
+sudo systemctl status apache2
+```
+The output should be similar to this:
+```
+ apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2022-09-22 07:44:05 UTC; 1 week 4 days ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 86966 ExecReload=/usr/sbin/apachectl graceful (code=exited, status=0/SUCCESS)
+   Main PID: 17957 (apache2)
+      Tasks: 9 (limit: 1143)
+     Memory: 24.7M
+        CPU: 1min 1.104s
+     CGroup: /system.slice/apache2.service
+             ├─17957 /usr/sbin/apache2 -k start
+             ├─86972 /usr/sbin/apache2 -k start
+             ├─86973 /usr/sbin/apache2 -k start
+             ├─86974 /usr/sbin/apache2 -k start
+             ├─86975 /usr/sbin/apache2 -k start
+             ├─86976 /usr/sbin/apache2 -k start
+             ├─86977 /usr/sbin/apache2 -k start
+             ├─87185 /usr/sbin/apache2 -k start
+             └─88180 /usr/sbin/apache2 -k start
+```
+#### Clone sample PHP website
 Use these commands to pull a simple PHP website repo
 ```
 cd /var/www/
@@ -140,3 +221,4 @@ Go to `http://your_public_ipv4_address`
 ### References:
 - [How To Install the Apache Web Server on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04)
 - [Install the latest PHP on Ubuntu 22.04](https://linuxhint.com/install-latest-php-ubuntu22-04/)
+- [Sample PHP website repo](https://github.com/banago/simple-php-website)
