@@ -3,7 +3,7 @@
 </p>
 Here is a guide on how you will create a LAMP server on AWS running a Laravel project with the following configuration:
 
-**Amazon Linux OS**: Centos 7, WebService: Apache, PHP8, DB: MariaDB
+**Amazon Linux OS**: AWS linux 2, WebService: Apache, PHP8, DB: MariaDB
 
 **Apache:** Is an open source reverse proxy server that uses popular HTTP, HTTPS, SMTP, POP3 and IMAP protocols. Also used as load balancer, HTTP cache and web server.
 
@@ -170,13 +170,12 @@ sudo yum install -y mariadb-server
 [ec2-user@ip-172-31-10-22 ~]$ sudo mysql_secure_installation
 Enter current password for root (enter for none): 
 ```
-### By default, the password will be blank, so just press Enter
-### Press **Y** to set the password then re-enter the password again
-### Press **Y** to delete the anonymous account.
-### Press **Y** to block logic with root
-### Press **Y** to delete DB Test
-### f. Press **Y** to reload and save changes
-
+By default, the password will be blank, so just press Enter   
+Press **Y** to set the password then re-enter the password again  
+Press **Y** to delete the anonymous account.  
+Press **Y** to block logic with root.  
+Press **Y** to delete DB Test.  
+Press **Y** to reload and save changes.  
 Now that MariaDB has been installed, you can access cmd to check the DB or install phpMyAdmin. Then create a db to run the project.
 ## Create a new DB with a project
 
