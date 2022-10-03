@@ -1,10 +1,5 @@
 # Introduction to Amazon EC2
 
-## Amazon EC2
- - We are developers, we build amazing things and we need to deploy our applications to **somewhere** that our users can use.
- - Amazon EC2 (Elastic Compute Cloud) provides us virtual server service - just imagine that each EC2 instance like your local computer.
-
-
 ## Launch an EC2 instance
 - After sign to AWS console, we search EC2 services and click on that
 ![Search EC2 service](./images/search_ec2.png)
