@@ -135,3 +135,8 @@ Select your instance, click on `Security` tab -> click on `your_security_group` 
 Go to `http://your_public_ipv4_address`
 
 ![Check your deployment](images/check-your-deployment.png?raw=true "Check your deployment")
+
+
+### References:
+- [How To Install the Apache Web Server on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04)
+- [Install the latest PHP on Ubuntu 22.04](https://linuxhint.com/install-latest-php-ubuntu22-04/)
