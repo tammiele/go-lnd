@@ -3,13 +3,13 @@
 ### Step 1: Create EC2 instance
 Search for EC2 services and click on `Launch instances`. Use Ubuntu as the server OS, create your own key pair, use `t2.micro` as the instance type (free for new users), and leave all fields at their default settings.
 
-![Search for ec2 service and launch instance](images/search-for-ec2.png?raw=true "Search for ec2 service and launch instance")
+![Search for ec2 service and launch instance](assets/search-for-ec2.png?raw=true "Search for ec2 service and launch instance")
 
-![Launch instance form](images/launch-instance.png?raw=true "Launch instance form")
+![Launch instance form](assets/launch-instance.png?raw=true "Launch instance form")
 
 ### Step 2: Connect to the instance
 After creating the instance successfully, go to the instance dashboard, choose your one, and click on `Actions` -> `Connect`.
-![Connect to the instance](images/connect-to-instance.png?raw=true "Connect to the instance")
+![Connect to the instance](assets/connect-to-instance.png?raw=true "Connect to the instance")
 
 ### Step 3: Install software
 #### Install Apache
@@ -59,9 +59,9 @@ Status: active
 
 To                         Action      From
 --                         ------      ----
-OpenSSH                    ALLOW       Anywhere                  
-Apache                     ALLOW       Anywhere                
-OpenSSH (v6)               ALLOW       Anywhere (v6)             
+OpenSSH                    ALLOW       Anywhere
+Apache                     ALLOW       Anywhere
+OpenSSH (v6)               ALLOW       Anywhere (v6)
 Apache (v6)                ALLOW       Anywhere (v6)
 ```
 #### Checking your Web Server
@@ -211,11 +211,11 @@ php --version
 ### Step 4: Update security group rules
 Select your instance, click on `Security` tab -> click on `your_security_group` -> add inbound rule `port 80`
 
-![Edit inbound rule](images/edit-inbound-rule.png?raw=true "Edit inbound rule")
+![Edit inbound rule](assets/edit-inbound-rule.png?raw=true "Edit inbound rule")
 ### Step 5: Check your deployment
 Go to `http://your_public_ipv4_address`
 
-![Check your deployment](images/check-your-deployment.png?raw=true "Check your deployment")
+![Check your deployment](assets/check-your-deployment.png?raw=true "Check your deployment")
 
 
 ### References:

@@ -132,27 +132,27 @@ The default Apache configuration file is located at ``/etc/httpd/conf/httpd.conf
 sudo systemctl restart httpd
 ```
 
-# Open port public for server 
+# Open port public for server
 So we have installed Apache, but we still have 1 more step to open the browser and enter Public IP Address or Public IP DNS to be able to see our web service.
 AWS has a security department, it's like a firewall. You need a public port to allow outsiders to access our server through the ports we allow. It's called Security Group
 So what do we need to do, very simple, every time you create an EC2 instance, it will be assigned a security group by default. We'll just open the port for them. Here's how to do it:
 1. Open AWS console link [https://console.aws.amazon.com/ec2/](https://console.aws.amazon.com/ec2/).
 2. Instance part, choose instance that you create for web service
-3. Tab **Security** tab,  Inbound rules, you will see the config default:  
+3. Tab **Security** tab,  Inbound rules, you will see the config default:
 
 | Port range | Protocol | Source    |
 |------------|----------|-----------|
 | 22         | tcp      | 0.0.0.0/0 |
 
 This is default _inbound rules_  so you can have SSH access to the server. Now we will create another rule to allow access to the Apache web.
-Select the Security groups link above and click edit Inbound rules, then choose as below and save:  
-**Type**: HTTP  
-**Protocol**: TCP  
-**Port** Range: 80  
-**Source**: Custom  
+Select the Security groups link above and click edit Inbound rules, then choose as below and save:
+**Type**: HTTP
+**Protocol**: TCP
+**Port** Range: 80
+**Source**: Custom
 
 Now you can open a browser and access Ip Public or Ip public DNS. By default web source will be saved at /var/www/html. If this directory is empty, it will display the default Apache template.
-So we're done publicizing. Next we will install Database 
+So we're done publicizing. Next we will install Database
 # Install MariaDB
 ## Similar to installing PHP, we use the following command:
 ```
@@ -168,18 +168,18 @@ sudo yum install -y mariadb-server
 
 ```
 [ec2-user@ip-172-31-10-22 ~]$ sudo mysql_secure_installation
-Enter current password for root (enter for none): 
+Enter current password for root (enter for none):
 ```
-By default, the password will be blank, so just press Enter   
-Press **Y** to set the password then re-enter the password again  
-Press **Y** to delete the anonymous account.  
-Press **Y** to block logic with root.  
-Press **Y** to delete DB Test.  
-Press **Y** to reload and save changes.  
+By default, the password will be blank, so just press Enter
+Press **Y** to set the password then re-enter the password again
+Press **Y** to delete the anonymous account.
+Press **Y** to block logic with root.
+Press **Y** to delete DB Test.
+Press **Y** to reload and save changes.
 Now that MariaDB has been installed, you can access cmd to check the DB or install phpMyAdmin. Then create a db to run the project.
 ## Create a new DB with a project
 
-... 
+...
 # Deploy PHP (Laravel) Project
 Deploying PHP Laravel projects can be deployed manually, but I should prioritize using git for convenience and speed.
 ## Install git

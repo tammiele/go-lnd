@@ -1,4 +1,4 @@
-# Deploy a simple NodeJS to AWS EC2
+# Deploy A Simple NodeJS To AWS EC2
 
 ### Table of Contents
 - [Intro](#intro)
@@ -6,6 +6,7 @@
   - [Create AWS EC2](#create-aws-ec2)
   - [SSH to virtual](#ssh-to-virtual)
   - [Run server in EC2](#run-server-in-ec2)
+
 ## Intro
 **What is EC2?**
 [EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html) (Elastic  Compute Cloud) is an environment helping your frontend, backend applications can go live in `production` or `staging`.
@@ -15,26 +16,26 @@
 
 ## Deploy the server
 **Note:** You must have an AWS account and access to `EC2 Dashboard`.
-![EC2 Dashboard](./images/1.png)
+![EC2 Dashboard](./assets/1.png)
 
 #### Create AWS EC2
 First, press `Launch Instance` button.
 
 - Fill in name of instance
-![name of instance](./images/2.png)
+![name of instance](./assets/2.png)
 
 - Select OS of the virtual server. I often use Ubuntu here.
-![virtual server type](./images/3.png)
+![virtual server type](./assets/3.png)
 
 - Generate **key pair**. If you want to ssh to the virtual, you must have it.**
   - Press `Create new key pair`
-  ![generate key pair](./images/4.png)
+  ![generate key pair](./assets/4.png)
 
   - Fill in `Key pair name`, then press `Create key pair` and **save** it in your laptop.
-![key pair](./images/5.png)
+![key pair](./assets/5.png)
 
 - Press `Launch Instance`. The instance is created successfully.
-![launch instance](./images/6.png)
+![launch instance](./assets/6.png)
 
 #### SSH to virtual
 **Note:** If you use iTerm2 on Apple Silicon chip, I think you can met the terminal is very slow and lag. So you can try using [WARP](https://www.warp.dev/) instead.
@@ -48,7 +49,7 @@ Otherwise, you will get an error `Unprotected private key file`.
 ```bash
 $ chmod 400 <file-name>.pem
 ```
-![ssh successfully](./images/7.png)
+![ssh successfully](./assets/7.png)
 
 #### Run server in EC2
 - Set up env and others
@@ -108,11 +109,11 @@ $ chmod 400 <file-name>.pem
   ```bash
   $ pm2 log
   ```
-  ![server log](./images/9.png)
+  ![server log](./assets/9.png)
 
 Now, the server is running on port **8080** and the url is `<public-ipv4-address>:8080`.
 But I think you can get an error being `too long to respond`. You must update `inbound rules` below.
-![inbounce rules](./images/8.png)
+![inbounce rules](./assets/8.png)
 
 **After that, Congrats! The Node server is being run now. 🥳🥳🥳**
 

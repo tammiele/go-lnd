@@ -2,13 +2,13 @@
 
 ### Step 1: Create an EC2 instance
 Click on `launch instances` and fill out all the required fields. In this tutorial we will launch a `t2.micro` instance, using Debian AMI.
-![Create an instance](./images/1.png "Create an instance")
+![Create an instance](./assets/1.png "Create an instance")
 
 In `Key pair` section, you can create a new key pair an store in your local machine. If you have already had once, select it on the dropdown to re-use the old key pair. Everything else you can left it as default and click `Launch instance`
 
 ### Step 2: Connect to the instance
 Go to the detail page of your instance and click on `Action` -> `Connect`. A small container will pop up with guide you how to connect step by step.
-![Create an instance](./images/2.png "Create an instance")
+![Create an instance](./assets/2.png "Create an instance")
 
 ### Step 3: Install software
 #### Install Ruby and needed packages
