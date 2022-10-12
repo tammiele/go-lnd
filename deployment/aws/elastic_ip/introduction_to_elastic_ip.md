@@ -14,14 +14,17 @@ Assumed that you had an EC2 instance. And we will allocate and associate an EIP 
 
 ### Allocate an Elastic IP address
 ![Allocation EIP](./images/allocation.png)
+<br/>
 You can see an Elastic IP was allocated like the image below
 ![EIP dashboard](./images/EIP_dashboard.png)
+<br/>
 Select **Action --> View detail** to view that Elastic IP detail
 ![EIP detail](./images/EIP_details.png)
 
 ### Associate an Elastic IP with an instance
 This is my instance. Let's apply Elastic IP for it!
 ![Instance without EIP](./images/EC2_without_EIP.png)
+<br/>
 In **Action** -> **Associate Elastic IP address**
 Select **Resource type** is **Instance**, the instance name that you need to association to. And click **Associate**
 ![Associate EIP](./images/EIP_association.png)
