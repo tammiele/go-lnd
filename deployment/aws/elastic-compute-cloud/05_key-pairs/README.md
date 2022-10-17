@@ -3,7 +3,7 @@
 ### Table of Contents
 - [Intro](#intro)
 - [Create a key pairs](#create-a-key-pairs)
-- [Lost key pairs][#lost-key-pairs]
+- [Lost key pairs](#lost-key-pairs)
 
 ## Intro
 - A key pair is **a combination of a public key that is used to encrypt data and a private key that is used to decrypt data**. When we create an instance, we must create a key pair helping us to connect to the virtual in ssh.
@@ -27,7 +27,7 @@
 
 The private key file is automatically downloaded by our browser. Save it in a secure place.
 
-- If you want to SSH to the virtual, we will must run below
+- If you want to SSH to the virtual, we should run below
 
 ```bash
   chmod 400 <key-pair-name>.pem
@@ -36,3 +36,4 @@ The private key file is automatically downloaded by our browser. Save it in a se
 Now we can SSH to the virtual with the private key file.
 
 ## Lost key pairs
+If it is a beautiful day, we can not find the private key file. What do we do in this case?
