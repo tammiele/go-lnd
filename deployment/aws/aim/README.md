@@ -5,9 +5,9 @@
 - [Users and User Groups](#users-and-user-groups)
   - [Users](#users)
   - [User Groups](#user-groups)
-- [Roles and Polices](#roles-and-polices)
+- [Roles and Polices](#roles-and-policies)
   - [Roles](#roles)
-  - [Polices](#polices)
+  - [Policies](#polices)
 - [User Permissions](#user-permissions) 
 
 ## Root User
@@ -29,10 +29,12 @@ We can press IAM in Services, then access to IAM dashboard.
 
   This is a group having many IAM users, and a user can also belong to many groups. We can use the user groups specify to permissions for a collection of users instead of updating each user.
 
-## Roles and Polices
+## Roles and Policies
 
   #### Roles
+  A set of permissions that you can use to access the AWS resources you need. Maybe, an IAM role is similar to a user, but a role does not have credentials that we can switch roles after signing in with our user. A role can be understood as an account with temporary credentials to handle the different tasks with different roles.
 
   #### Polices
+  
 
 ## User Permissions
