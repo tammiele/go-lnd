@@ -63,3 +63,33 @@ AWS provides other database services, including the following:
 - **Amazon DynamoDB** key-value and document database for NoSQL databases;
 - **Amazon Neptune** for graph databases; and
 - **AWS Database Migration Service** to ease database transfers and transformations.
+
+## How to integrate AWS RDS database with Rails
+
+### Step 1: Create a database
+Click on `create databse` and select the configuration that fit your need. In this tutorial we will create a `PostgreSQL` database with simple configuration.
+![Create a database](./assets/04.png "Create a database")
+
+### Step 2: Connect to the instance
+After the create process, click on `View connection details` and add the information into Rails app.
+
+![View database details](./assets/05.png "View database details")
+
+*config/database.yml*
+```
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: test_rds_db_development
+  username: postgres
+  password: admin123
+  host: mydb.123456789012.us-east-1.rds.amazonaws.com
+  port: 5432
+```
+
+The above configuration is just for illustrating. We suggest you to save credentials into .env file to secure.
