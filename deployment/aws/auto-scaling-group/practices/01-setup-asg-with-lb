@@ -1,1 +1,44 @@
 # Setup ASG with LB
+
+## Step 1: Choose launch template or configuration
+Give it a name and select a launch template. If you don't have, let's create one!
+### Create lauch template:
+- Select instance OS image, instance type, key pair, network settings, storage, resource tags and `User data` in `Advanced details` tab.
+- `User data` let you set up environment for the project after the instance booted up. Example: install php, composer, clone source code, run setup commands, ...
+- Launch template can have multiple versions.
+
+![Choose launch template or configuration](../assets/step-1-choose-lauch-template-or-configuration.png?raw=true "Choose launch template or configuration")
+
+![Create launch template](../assets/step-1-create-launch-template.png?raw=true "Create launch template")
+
+## Step 2: Choose instance launch options
+- You will choose the VPC network environment that your instances are launched into, and customize the instance types and purchase options.
+- You can skip step 3, 4, 5 to review and create auto scaling group.
+
+![Choose instance launch options](../assets/step-2-choose-instance-launch-options.png?raw=true "Choose instance launch options")
+
+## Step 3 (Optional): Configure advanced options
+- You will choose load balancer, target group, config health checks, enable cloudwatch here.
+
+![Configure advanced options](../assets/step-3-configure-advanced-options.png?raw=true "Configure advanced options")
+
+## Step 4 (Optional): Configure group size and scaling policies
+- You will specify the desired, minimum and maximum number of instances.
+- Choose your scaling policies to match your demands
+
+![Configure group size and scaling policies](../assets/step-4-configure-group-size-and-scaling-policies.png?raw=true "Configure group size and scaling policies")
+
+## Step 5 (Optional): Add notifications
+- You will create notifications to subscribe to events.
+
+![Add notifications](../assets/step-5-add-notifications.png?raw=true "Add notifications")
+
+## Step 6 (Optional): Add tags
+- You will create tags that helps you search, filter and track easily.
+
+![Add tags](../assets/step-6-add-tags.png?raw=true "Add tags")
+
+## Step 7: Review
+- Review all information before creating auto scaling group
+
+![Review](../assets/step-7-review.png?raw=true "Review")
