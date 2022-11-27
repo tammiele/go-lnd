@@ -4,15 +4,15 @@
 Give it a name and select a launch template. If you don't have, let's create one!
 ### Create lauch template:
 - Select instance OS image, instance type, key pair, network settings, storage, resource tags and `User data` in `Advanced details` tab.
-- `User data` let you set up environment for the project after the instance booted up. Example: install php, composer, clone source code, run setup commands, ...
-- Launch template can have multiple versions.
+- `User data` let you set up environment for the project after the instance booted up. Example: install packages, clone source code, run setup commands, ...
+- A launch template can have multiple versions. You can specify which version ASG will run or let it use the latest version by default.
 
 ![Choose launch template or configuration](../assets/step-1-choose-lauch-template-or-configuration.png?raw=true "Choose launch template or configuration")
 
 ![Create launch template](../assets/step-1-create-launch-template.png?raw=true "Create launch template")
 
 ## Step 2: Choose instance launch options
-- You will choose the VPC network environment that your instances are launched into, and customize the instance types and purchase options.
+- You will choose the VPC network environment that your instances are launched into, customize the instance types and purchase options.
 - You can skip step 3, 4, 5 to review and create auto scaling group.
 
 ![Choose instance launch options](../assets/step-2-choose-instance-launch-options.png?raw=true "Choose instance launch options")
@@ -42,3 +42,9 @@ Give it a name and select a launch template. If you don't have, let's create one
 - Review all information before creating auto scaling group
 
 ![Review](../assets/step-7-review.png?raw=true "Review")
+
+## References
+- [Auto Scaling Groups](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html)
+- [Auto Scaling Groups Overview](https://www.udemy.com/tutorial/aws-certified-developer-associate-dva-c01/auto-scaling-groups-asg-overview/)
+- [AWS Auto Scaling Groups Introduction](https://www.youtube.com/watch?v=jvMoWjsP7Pk)
+- [AWS Auto Scaling Groups and Load Balancers](https://www.youtube.com/watch?v=AmQeeB4ygZc)

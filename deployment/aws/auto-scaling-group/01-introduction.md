@@ -34,3 +34,8 @@
     - We can create scale-in policies (decrease the number of instances)
 
 ![ASG in AWS with CloudWatch](assets/asg-in-aws-with-cloudwatch.png?raw=true "ASG in AWS with CloudWatch")
+## References
+- [Auto Scaling Groups](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html)
+- [Auto Scaling Groups Overview](https://www.udemy.com/tutorial/aws-certified-developer-associate-dva-c01/auto-scaling-groups-asg-overview/)
+- [AWS Auto Scaling Groups Introduction](https://www.youtube.com/watch?v=jvMoWjsP7Pk)
+- [AWS Auto Scaling Groups and Load Balancers](https://www.youtube.com/watch?v=AmQeeB4ygZc)
