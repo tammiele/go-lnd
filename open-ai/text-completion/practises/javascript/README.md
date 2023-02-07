@@ -15,13 +15,15 @@ Moreover, the model will return different results even if you send the same text
 **Note:** We only use OpenAI for server-side, if not it will expose your secret API key.
 
 #### Generate secret API key
-**Note:** You must have an OpenAI account and access to `API keys`
-![api key dashboard](./assets/api-keys-dashboard.png)
+  **Note:** You must have an OpenAI account and access to `API keys`
+  
+  ![api key dashboard](./assets/api-keys-dashboard.png)
 
-- Press `Create new secret key` button and press `Copy` the API key
-![gen api key](./assets/generate-api-key.png)
+  - Press `Create new secret key` button and press `Copy` the API key
+  
+  ![gen api key](./assets/generate-api-key.png)
 
-Now you had the secret API key.
+  Now you had **the secret API key**.
 
 #### Run OpenAI on Node app
 - Setup env and others
