@@ -4,6 +4,12 @@
 - [NodeJS example app](#nodejs-example-app)
 
 ## Intro
+When you input some text, the model will return a text completion. 
+
+If you provide the complexity of the task and quality of your text that is enough good, you will receive an answer more exactly. 
+
+Moreover, the model will return different results even if you send the same text.
+
 
 ## OpenAI on NodeJS App
 **Note:** We only use OpenAI for server-side, if not it will expose your secret API key.
